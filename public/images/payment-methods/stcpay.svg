@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 471" width="50" height="32">
+  <rect fill="#fff" width="750" height="471" rx="40"/>
+  <rect fill="#4F008C" x="100" y="120" width="550" height="231" rx="20"/>
+  <g fill="#fff">
+    <text x="160" y="270" font-family="Arial, sans-serif" font-size="80" font-weight="bold">stc</text>
+    <text x="340" y="270" font-family="Arial, sans-serif" font-size="80" font-weight="300">pay</text>
+  </g>
+</svg>

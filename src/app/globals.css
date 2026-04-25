@@ -1,0 +1,154 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Brand palette (authoritative hex values)
+       Primary        #37469E   HSL(232 48% 42%)
+       Cream bg       #FEF9F3   HSL(33  84% 97%)
+       Gradient A     #4555A7 -> #53406B
+       Gradient B     #3E234C -> #6C3C85
+    */
+    --background: 33 84% 97%;
+    --foreground: 232 48% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 232 48% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 232 48% 15%;
+    --primary: 232 48% 42%;
+    --primary-foreground: 33 84% 98%;
+    --secondary: 232 30% 94%;
+    --secondary-foreground: 232 55% 28%;
+    --muted: 33 40% 95%;
+    --muted-foreground: 232 15% 42%;
+    --accent: 232 48% 88%;
+    --accent-foreground: 232 55% 28%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 33 35% 90%;
+    --input: 33 35% 90%;
+    --ring: 232 48% 42%;
+    --radius: 0.5rem;
+
+    /* Brand canonical gradients */
+    --brand-from: #4555a7;
+    --brand-to: #53406b;
+    --brand-deep-from: #3e234c;
+    --brand-deep-to: #6c3c85;
+    --brand-primary: #37469e;
+    --brand-cream: #fef9f3;
+
+    /* Runtime-controlled gradient (set by ThemeContext) */
+    --gradient-from: #4555a7;
+    --gradient-to: #53406b;
+  }
+
+  .dark {
+    --background: 232 55% 8%;
+    --foreground: 33 50% 96%;
+    --card: 232 50% 12%;
+    --card-foreground: 33 50% 96%;
+    --popover: 232 50% 12%;
+    --popover-foreground: 33 50% 96%;
+    --primary: 232 60% 58%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 265 26% 22%;
+    --secondary-foreground: 33 50% 96%;
+    --muted: 232 30% 18%;
+    --muted-foreground: 232 15% 65%;
+    --accent: 282 38% 28%;
+    --accent-foreground: 33 50% 96%;
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 33 50% 96%;
+    --border: 232 30% 22%;
+    --input: 232 30% 22%;
+    --ring: 232 60% 58%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  /* Brand color utilities */
+  .btn-primary {
+    @apply bg-primary text-primary-foreground hover:bg-primary/90 transition-colors;
+  }
+
+  .link-primary {
+    @apply text-primary hover:text-primary/80 transition-colors;
+  }
+
+  .badge-primary {
+    @apply bg-primary text-primary-foreground px-2 py-1 rounded-md text-sm;
+  }
+
+  .card-primary {
+    @apply bg-card border-primary/20 shadow-sm;
+  }
+
+  /* Canonical brand gradient (palette's "Gradient 2") */
+  .bg-brand {
+    background-image: linear-gradient(to right, #4555a7, #53406b);
+  }
+  .bg-brand-br {
+    background-image: linear-gradient(to bottom right, #4555a7, #53406b);
+  }
+  .bg-brand-deep {
+    background-image: linear-gradient(to right, #3e234c, #6c3c85);
+  }
+  .bg-brand-deep-br {
+    background-image: linear-gradient(to bottom right, #3e234c, #6c3c85);
+  }
+  .text-brand-gradient {
+    background: linear-gradient(to right, #4555a7, #53406b);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+  .ring-brand {
+    --tw-ring-color: #37469e;
+  }
+}
+
+@layer utilities {
+  /* Gradient animations */
+  @keyframes gradient-shift {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+
+  @keyframes gradient-rotate {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient-shift 3s ease infinite;
+  }
+
+  .animate-gradient-slow {
+    background-size: 200% 200%;
+    animation: gradient-rotate 5s ease infinite;
+  }
+}

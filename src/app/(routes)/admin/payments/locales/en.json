@@ -1,0 +1,65 @@
+{
+  "admin": {
+    "payments": {
+      "plans": {
+        "title": "Plan Management",
+        "subtitle": "Create and manage subscription plans for your customers.",
+        "refresh": "Refresh",
+        "saveChanges": "Save Changes",
+        "noChanges": "No Changes",
+        "editMode": "Edit Mode",
+        "exitEditMode": "Exit Edit Mode",
+        "monthly": "Monthly",
+        "yearly": "Yearly",
+        "yearlyPromo": "Get 2 months free with annual plans",
+        "addPlan": "Add Plan",
+        "addFeature": "Add Feature",
+        "success": "Success",
+        "error": "Error",
+        "tryAgain": "Try again",
+        "loadingPlans": "Loading payment plans...",
+        "allChangesSaved": "All changes saved successfully!",
+        "editModeTips": "Edit Mode Tips:",
+        "editTip1": "Click on feature icons (✓/🔒) to toggle plan availability",
+        "editTip2": "Use the star icon to set a plan as featured",
+        "editTip3": "Click the trash icon to delete plans or features",
+        "editTip4": "Edit plan names and subtitles by clicking on them",
+        "editTip5": "Click \"Save Changes\" to save all pending modifications",
+        "unsavedChanges": "You have unsaved changes - remember to save!"
+      },
+      "addPlanModal": {
+        "title": "Add New Plan",
+        "planName": "Plan Name",
+        "planNameRequired": "Plan name is required",
+        "monthlyPrice": "Monthly Price (SAR)",
+        "monthlyPriceRequired": "Valid monthly price is required",
+        "yearlyPrice": "Yearly Price (SAR)",
+        "yearlyPriceRequired": "Valid yearly price is required",
+        "description": "Description",
+        "descriptionPlaceholder": "e.g., Perfect for growing businesses that need advanced features and priority support",
+        "subtitle": "Subtitle",
+        "subtitleRequired": "Subtitle is required",
+        "subtitlePlaceholder": "e.g., Contact sales",
+        "badge": "Badge (Optional)",
+        "badgePlaceholder": "e.g., Most Popular",
+        "cancel": "Cancel",
+        "creating": "Creating...",
+        "addPlan": "Add Plan"
+      },
+      "addFeatureModal": {
+        "title": "Add New Feature",
+        "featureName": "Feature Name",
+        "featureNameRequired": "Feature name is required",
+        "featureNamePlaceholder": "e.g., Advanced Analytics",
+        "cancel": "Cancel",
+        "adding": "Adding...",
+        "addFeature": "Add Feature",
+        "failedToAdd": "Failed to add feature. Please try again."
+      },
+      "pageHeader": {
+        "filter": "Filter",
+        "export": "Export"
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+export { default as CustomerTypeSelector } from './CustomerTypeSelector';
+export { default as BasicInformationForm } from './BasicInformationForm';
+export { default as AddressInformationForm } from './AddressInformationForm';
+export { default as ContactPersonsForm } from './ContactPersonsForm';
+export { default as BankingInformationForm } from './BankingInformationForm';
+export { default as CustomerSettings } from './CustomerSettings';
+export { default as CreditLimitsForm } from './CreditLimitsForm';
+export { default as DocumentsUpload } from './DocumentsUpload';
+export { default as ComplianceForm } from './ComplianceForm';
+export { default as PaymentLimitsForm } from './PaymentLimitsForm';

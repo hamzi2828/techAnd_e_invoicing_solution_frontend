@@ -1,0 +1,1 @@
+export { useAdminProfile } from './useAdminProfile';
