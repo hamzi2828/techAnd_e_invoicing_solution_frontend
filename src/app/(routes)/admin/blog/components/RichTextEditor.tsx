@@ -434,11 +434,11 @@ export default function RichTextEditor({
           border-radius: 0.5em;
         }
         .ProseMirror a {
-          color: #3b82f6;
+          color: #37469e;
           text-decoration: underline;
         }
         .ProseMirror a:hover {
-          color: #2563eb;
+          color: #4555a7;
         }
       `}</style>
     </div>

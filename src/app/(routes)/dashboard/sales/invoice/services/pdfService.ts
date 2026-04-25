@@ -97,7 +97,7 @@ export class PDFService {
           overflow: hidden;
         }
         .invoice-header {
-          background: linear-gradient(135deg, #84cc16 0%, #65a30d 100%);
+          background: linear-gradient(135deg, #4555a7 0%, #53406b 100%);
           color: white;
           padding: 30px;
           text-align: center;
@@ -117,8 +117,8 @@ export class PDFService {
           margin-bottom: 30px;
         }
         .detail-section h3 {
-          color: #84cc16;
-          border-bottom: 2px solid #84cc16;
+          color: #37469e;
+          border-bottom: 2px solid #37469e;
           padding-bottom: 5px;
           margin-bottom: 15px;
         }

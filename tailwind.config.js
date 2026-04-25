@@ -1,4 +1,52 @@
 /** @type {import('tailwindcss').Config} */
+
+// Brand palette (authoritative — from public/Color palette/*)
+//   Primary 1   #37469E   (royal indigo-blue)
+//   BG          #FEF9F3   (warm cream)
+//   Gradient 2  #4555A7 -> #53406B  (blue -> muted purple)
+//   Gradient 3  #3E234C -> #6C3C85  (deep purple -> mid purple)
+//
+// All `blue`, `indigo`, `sky`, `cyan` shades are remapped to the primary
+// (indigo-blue) scale. All `purple`, `violet`, `fuchsia` shades are remapped
+// to the brand purple scale. This guarantees that any utility class anywhere
+// in the codebase resolves to a palette color.
+const primaryScale = {
+  50: "#f3f4fc",
+  100: "#e4e6f6",
+  200: "#c1c7ec",
+  300: "#8c94d6",
+  400: "#626fbe",
+  500: "#37469e",
+  600: "#2d398a",
+  700: "#242e72",
+  800: "#1c2459",
+  900: "#0f1439",
+  950: "#080a24",
+};
+
+const purpleScale = {
+  50: "#f7f3fa",
+  100: "#ece2f0",
+  200: "#d4bfde",
+  300: "#b393c6",
+  400: "#8c66a5",
+  500: "#6c3c85", // brand mid-purple
+  600: "#5e3475",
+  700: "#53406b", // brand purple (Gradient 2 endpoint)
+  800: "#3e234c", // brand deep purple (Gradient 3 start)
+  900: "#2a162f",
+  950: "#1a0d1d",
+};
+
+const creamScale = {
+  DEFAULT: "#fef9f3",
+  50: "#fffdf9",
+  100: "#fef9f3",
+  200: "#fbf1df",
+  300: "#f6e6c7",
+  400: "#ecd6a6",
+};
+
 module.exports = {
   darkMode: ["class"],
   content: [
@@ -17,16 +65,7 @@ module.exports = {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
-          50: "#f3f4fc",
-          100: "#e4e6f6",
-          200: "#c1c7ec",
-          300: "#8c94d6",
-          400: "#626fbe",
-          500: "#37469e",
-          600: "#2d398a",
-          700: "#242e72",
-          800: "#1c2459",
-          900: "#0f1439",
+          ...primaryScale,
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -62,14 +101,18 @@ module.exports = {
           "mid-purple": "#6c3c85",
           cream: "#fef9f3",
         },
-        cream: {
-          DEFAULT: "#fef9f3",
-          50: "#fffdf9",
-          100: "#fef9f3",
-          200: "#fbf1df",
-          300: "#f6e6c7",
-          400: "#ecd6a6",
-        },
+        cream: creamScale,
+
+        // Off-palette tailwind families remapped to brand scales so any
+        // legacy `bg-blue-*`, `text-indigo-*`, `from-purple-*`, etc. resolves
+        // to a palette color at build time.
+        blue: primaryScale,
+        indigo: primaryScale,
+        sky: primaryScale,
+        cyan: primaryScale,
+        purple: purpleScale,
+        violet: purpleScale,
+        fuchsia: purpleScale,
       },
       backgroundImage: {
         "brand-gradient": "linear-gradient(to right, #4555a7, #53406b)",

@@ -181,7 +181,7 @@ export default function PlansManagement() {
               <button
                 onClick={() => setIsYearly(!isYearly)}
                 className="relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
-                style={{ backgroundColor: isYearly ? '#3b82f6' : '#e5e7eb' }}
+                style={{ backgroundColor: isYearly ? '#37469E' : '#e5e7eb' }}
               >
                 <span
                   className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform shadow-sm ${

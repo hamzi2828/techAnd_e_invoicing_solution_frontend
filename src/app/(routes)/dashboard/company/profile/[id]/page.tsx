@@ -80,8 +80,8 @@ export default function CompanyProfilePage() {
     },
     branding: {
       logo: null,
-      primaryColor: '#84cc16',
-      secondaryColor: '#eab308',
+      primaryColor: '#37469E',
+      secondaryColor: '#53406b',
       companyTagline: '',
     },
     verification: {
@@ -134,8 +134,8 @@ export default function CompanyProfilePage() {
           },
           branding: {
             logo: null,
-            primaryColor: '#84cc16',
-            secondaryColor: '#eab308',
+            primaryColor: '#37469E',
+            secondaryColor: '#53406b',
             companyTagline: '',
           },
           verification: {
